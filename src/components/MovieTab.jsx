@@ -59,18 +59,16 @@ const MovieTab = ({ movieDetails }) => {
 export default MovieTab;
 
 MovieTab.propTypes = {
-  movieDetails: PropTypes.arrayOf(
-    PropTypes.shape({
-      poster_path: PropTypes.string,
-      title: PropTypes.string,
-      release_date: PropTypes.string,
-      vote_average: PropTypes.string,
-      overview: PropTypes.string,
-      genres: PropTypes.arrayOf(
-        PropTypes.shape({
-          name: PropTypes.string,
-        })
-      ),
-    })
-  ),
+  movieDetails: PropTypes.shape({
+    poster_path: PropTypes.string,
+    title: PropTypes.string,
+    release_date: PropTypes.string,
+    vote_average: PropTypes.number,
+    overview: PropTypes.string,
+    genres: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+      })
+    ),
+  }),
 };
